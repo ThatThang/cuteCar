@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);/* Mã màu 123 Night Sky ( webgradient.com ) */
+    overflow-y: hidden;/* Ẩn đi phần nội dung bị tràn ra khỏi khung nếu có kích cỡ lớn */
+    
+}
+
+.night {
+    
+    height: 80vh; /* Chiều cao = 80% trình duyệt */
+    width: 70vw; /* Chiều rộng = 70% trình duyệt */
+    border: 1px solid black;
+    margin: 5rem auto; /* Cách trên dưới 80px ( 1rem = 16px ) trái phải auto */
+    background: url(./assets/Img_1.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    
+}
+
+.surface {
+    height: 140px;
+    width: 500%;
+    background: url(./assets/Img_02.png);
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveright 7s linear infinite;
+   
+}
+
+.car {
+    position: absolute;
+    bottom: 7.5%;
+    left: 24%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes moveright {
+    100%{transform: translateX(-2950px);}
+    
+}
+
+@keyframes animate {
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    0% {
+        transform: translateY(-1px);
+    }
+}
